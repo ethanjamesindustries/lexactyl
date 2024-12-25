@@ -1,8 +1,8 @@
 /*
- *  Halex Spaceport (Pinnacle Ridge)
+ *  Lexactyl (Flameing)
  *  
- *  Built on Heliactyl 22750 (Summit Ridge)
- *  © 2014 - 2024 SRYDEN, Inc.
+ *  Built on Spaceport (Maqquien)
+ *  © 2021 - 2024 Renvoo, Inc.
 */
 
 const fs = require("fs");
@@ -81,7 +81,7 @@ const session_db = new sqlite("sessions.db");
 
 module.exports.app = app;
 app.use(function (req, res, next) {  
-  res.header("X-Powered-By", "Spaceport & Heliactyl (Avalanche 15xxx)");
+  res.header("X-Powered-By", "Spaceport & U18 (Flameing)");
   next();
 });
 app.use(session({
@@ -107,7 +107,7 @@ app.use(express.json({
 }));
 
 const listener = app.listen(settings.website.port, function() {
-  console.log(chalk.green("Spaceport is online on port " + listener.address().port));
+  console.log(chalk.green("Lexactyl is online on port " + listener.address().port));
 });
 
 let ipratelimit = {};
